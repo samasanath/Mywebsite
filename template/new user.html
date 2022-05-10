@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new registration form</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+    	div.a{
+	  border: 1px solid black;
+	  margin-top: 80px;
+	  margin-bottom: 100px;
+	  margin-right: 1000px;
+	  margin-left: 80px;
+	  background-color: lightgreen;
+	}
+	</style>
+</head>
+<body>
+	<body style ="background-color:lightyellow;">
+	<form action="" method="POST">
+		<h2>Welcome.....</h2>
+		<h3>Please fill all the details</h3>
+		<label>Name  :</label>
+		<input type="text" name="name" placeholder="enter your name"><br><br>
+		<label>Mail i'd:</label>
+		<input type="text" name="username" placeholder="username as email" required><br><br>
+		<label>Password :</label>
+		<input type="password" name="password" placeholder="password"  pattern="(?=.*\d)(?=.*[a-z]).{5,}" title="Must contain at least one number and lowercase letter, and at least 5 or more characters"required>
+		<p><strong>note:</strong>Must contain at least one number and lowercase letter, and at least 5 or more characters</p>
+		<br>
+		<input type="submit" name="submit">
+
+		
+	</form>
+
+</body>
+</html>

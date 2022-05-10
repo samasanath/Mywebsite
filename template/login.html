@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <style>
+      body, html {
+  height: 100%;
+  margin: 0;
+}
+      body {
+        background-image: url('/static/login-bg.JPG');
+        height: 100%;
+ 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align:center;
+
+      }
+      .g-recaptcha {
+        display: inline-block;
+      }
+      div {text-align: center;}
+      
+    </style>
+  </head>
+  <body>
+    <body style ="background-color:lightblue;" style="background-image: url('login-bg.JPG');">
+
+
+      <h1>welcome to my page</h1>
+      <h2>Please login</h2>
+      
+
+    <form action="/" method="post">
+
+        <P>username</P>
+        <input type="text" placeholder="username" name="username" value="{{request.form.username }}">
+        <P>password</P>
+         <input type="password" placeholder="Password" name="password" value="{{request.form.password }}">
+          <br>
+          <br>
+        <div class="g-recaptcha"  data-sitekey="{{ sitekey }}"></div>
+        <br>
+        <br>
+        <input type="submit" value="Login">
+        <input type="reset" name="reset">
+
+    </form>
+
+      <a href=/registration><input type="submit" value="new user"></a>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+  </body>
+</html>
